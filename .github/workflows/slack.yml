@@ -31,6 +31,7 @@ jobs:
         with: 
          webhook-url: ${{ secrets.WEBHOOK }}
          message: Go and fix your bug
+         status: 200
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
