@@ -7,8 +7,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,9 +23,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a single command using the runners shel
-      - name: GITACTIONS
-        uses: slackapi/slack-github-action@v2.1.0
+      # Runs a single command using the runners shell
+      - name: Send a slack message
+        uses: act10ns/slack@v2.1.0
         with: 
          webhook-url: ${{ secrets.WEBHOOK }}
          message: Go and fix your bug
