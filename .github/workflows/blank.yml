@@ -23,7 +23,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
+      # Runs a single command using the runners shel
       - name: Send a slack message on push
         uses: act10ns/slack@v2.1.0
         with: 
