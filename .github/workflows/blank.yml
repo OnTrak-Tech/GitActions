@@ -24,9 +24,10 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
-      - name: Send a slack message
+      - name: Send a slack message on push
         uses: act10ns/slack@v2.1.0
         with: 
          webhook-url: ${{ secrets.WEBHOOK }}
          message: Go and fix your bug
          status: 200
+ 
